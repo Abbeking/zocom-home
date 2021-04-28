@@ -12,7 +12,7 @@
       "type": "Light",
       "name": "Bedroom",
       "on": false,
-      "color": "#FFDE67",
+      "color": "#FF0000",
       "brightness": 1,
       "state": "off"
     },
@@ -61,17 +61,17 @@
       "id": "CAM1",
       "type": "Camera",
       "name": "Front door",
-      "on" : false,
+      "on": false,
       "secret": "a5e337f5-a391-4fda-894e-d14aba719c9e"
     },
     {
       "id": "SPE1",
       "type": "Speaker",
       "name": "Living room",
-      "on" : false,
-      "stream": { 
-        "file" : "testfile.mp3",
-        "name" : "testfile"
+      "on": false,
+      "stream": {
+        "file": "testfile.mp3",
+        "name": "testfile"
       }
     }
   ],
