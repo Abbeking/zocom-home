@@ -231,12 +231,12 @@ app.get("/ac/:id/:on", (req, res) => {
 
 
 
-  // Skriv "http://localhost:3000/lock/LOC1/locked" för att öppna dörren
+  // Skriv "http://localhost:3000/lock/LOC1/on för att öppna dörren
 // Ifall du vill låsa igen så skriver du http://localhost:3000/lock/LOC1/(valfri text) t.ex /off
-app.get("/lock/:id/:locked", (req, res) => {
+app.get("/lock/:id/:on", (req, res) => {
     let id = req.params.id;
     // lägger req.params.on === "on" till variabeln lockCheck
-    let lockCheck = req.params.locked === "locked" 
+    let lockCheck = req.params.on === "on" 
     // if-statement kollar om lockCheck är true, annars är den false
     if (lockCheck) {
         true
@@ -249,7 +249,7 @@ app.get("/lock/:id/:locked", (req, res) => {
     // därefter så kollar .find efter den specifika id:n som skrivs in på URL:en
     .find({ id: id })
     // sedan så aktiverar .assign det som har skrivits nedan.
-    .assign({ on: lockCheck })
+    .assign({ on: lockCheck, locked: lockCheck })
     .value();
     update();
   
