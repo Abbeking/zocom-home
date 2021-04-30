@@ -33,7 +33,7 @@ app.get('/db', (req, res) => {
 // http://localhost:3000/speaker/SPE1/on
 // http://localhost:3000/blind/BLI1/on
 // http://localhost:3000/ac/AC1/on
-// http://localhost:3000/lock/LOC1/locked
+// http://localhost:3000/lock/LOC1/on
 
 
 
